@@ -38,4 +38,14 @@ a:hover {
     background-size: 10%;
 }
 
+/* Navigation Link Hover Effect */
+nav a:hover {
+    background-color: #d7c6cf; /* Soft Mauve (Your Highlight Color) */
+}
+
+/* Navigation Styling */
+nav {
+    padding: 10px; /* Adds padding inside the nav */
+    margin-bottom: 30px; /* Adds space below the nav */
+}
 
