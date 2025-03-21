@@ -1,0 +1,84 @@
+
+body {
+    background-color: #ebdada; /* Soft Pink */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url(../ist263/project/media/img_1.jpeg);
+    background-repeat: repeat-y;
+    background-size: 35%;
+}
+
+/* Headings */
+h1 {
+    background-color: #a2798f; /* Soft Mauve */
+    color: #dfdfde; /* Off White */
+    padding: 10px;
+    text-align: center;
+    margin:1em
+    
+}
+
+/* Links */
+a:visited {
+    color: #8caba8; /* Muted Teal */
+}
+
+a:hover {
+    background-color: #d7c6cf; /* Light Rose */
+}
+
+/* Box Styling */
+.box {
+    background-color: #a2798f; /* Soft Mauve */
+    border-width: 5px;
+    border-style: solid;
+    border-color: antiquewhite;
+    padding: 30px;
+}
+
+/* Background Image Styling */
+.bgimage {
+    background-image: url(../ist263/images/linkedin.svg);
+    background-size: 10%;
+}
+
+/* Navigation Link Hover Effect */
+nav a:hover {
+    background-color: #d7c6cf; /* Soft Mauve (Your Highlight Color) */
+}
+
+/* Navigation Styling */
+nav {
+    padding: 10px; /* Adds padding inside the nav */
+    margin-bottom: 30px; /* Adds space below the nav */
+}
+
+h2 {font-weight: bold;}
+
+
+
+.container {display:flex;
+            justify-content:space-between;
+            width:80%;
+            margin:auto}
+
+.skills {display:flex;margin:2em;flex-basis:75%;justify-content:space-evenly;gap:30px;
+        align-items:center;}
+
+.skills img { width: 64px;  /* Standard size for clarity */
+    height: 64px; /* Ensures uniform height */;
+    object-fit: contain;}
+
+.otherskills {background-color: #d7c6cf;
+            border-radius: 1em;
+            flex-basis:25%;
+            padding:2em;
+            margin:2em;
+            margin-left:1em}
+.otherskills h2 {
+                margin: 0;padding-bottom: 1em }           
+
+ p {margin:2em;
+    max-width: 80%;}
+            
+
+                        
