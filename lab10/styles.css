@@ -99,3 +99,8 @@ h2 {font-weight: bold;}
 nav span {
     display: none;
   }
+
+  .column {
+    flex: 0.5;
+    padding: 20px;;
+}
