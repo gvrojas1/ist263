@@ -1,0 +1,226 @@
+/* --- NAVIGATION STYLES --- */
+.navbar {
+    background-color: #f8edeb;
+    padding: 1rem 2rem;
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .brand {
+    font-weight: bold;
+    font-size: 1rem;
+    white-space:nowrap;
+  }
+  
+  /* Desktop nav by default */
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    width: 100%;
+  padding: 0.5rem 0;
+  white-space: nowrap;
+  }
+  
+  /* Hamburger button hidden on desktop */
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+
+/* RESPONSIVE: Hamburger nav + mobile layout */
+@media (max-width: 800px) {
+  
+    .hamburger {
+      display: block;
+    }
+
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem 0 0 1rem;
+      gap: 0.75rem;
+    }
+  
+    .nav-links.show {
+      display: flex;
+    }
+  
+    .testimonial {
+      flex: 1 1 calc(50% - 1rem);
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .testimonial {
+      flex: 1 1 100%;
+    }
+  
+    .header,
+    .catofweek,
+    .happy-adopters {
+      padding: 1rem;
+    }
+  
+    .nav-links {
+      width: 100%;
+    }
+  }
+  
+  body {background-color: 	#fbf7f5;
+    font-family: 'Quicksand', sans-serif;
+  }
+
+  img {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+
+  nav {
+    background-color: #f7cac9;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem 0;
+    font-weight: bold;
+  }
+
+ .header {
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.header-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.header-text {
+  flex: 1 1 60%;
+}
+
+.header-text h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.coverpic {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.catofweek {
+    text-align: center;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+  }
+ 
+  .catofweek h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cat-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .happy-adopters {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .testimonials {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .testimonial {
+    flex: 1 1 calc(25% - 1rem); 
+    background-color:#f2dcdb;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .happy-adopters h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 2rem auto;
+    width: 90%;
+  }
+
+  .site-footer {
+    background-color:#f8edeb;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+  }
+  
+  .social-links a {
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #666;
+  }
+  
+
+  
+  
+  
+  
+ 
+
+  
