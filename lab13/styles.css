@@ -1,3 +1,17 @@
+.skip {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+.skip:focus {
+    position: static;
+    width: auto;
+    height: auto;
+  }
 
 body {
     background-color: #ebdada; /* Soft Pink */
@@ -11,7 +25,7 @@ body {
 h1 {
     background-color: #a2798f; /* Soft Mauve */
     color: #dfdfde; /* Off White */
-    padding: 10px;
+    padding: 0.5em;
     text-align: center;
     margin:1em
     
