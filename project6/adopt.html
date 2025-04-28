@@ -22,95 +22,106 @@
           </button>
         </div>
       </nav>
-    <main>
-<section> 
-    <h1>How to Adopt a Cat</h1>
-    <p>Adopting a cat is a simple process with a big reward! Follow these steps to bring a cat into your life:</p>
-    <ol>
-      <li><strong>Browse Our Cats:</strong> Check out the profiles of available cats and choose the one that feels like the right fit for you.</li>
-      <li><strong>Fill Out an Adoption Application:</strong> Complete our easy-to-use application form, and tell us about your home and lifestyle.</li>
-      <li><strong>Meet Your Cat:</strong> Once your application is approved, we'll arrange a meet-and-greet with the cat you’re interested in.</li>
-      <li><strong>Finalize Adoption:</strong> If you and your new cat connect, we'll complete the adoption paperwork and make sure your new companion is ready to go home with you!</li>
-    </ol>
-</section>
-<section> 
-    <h2>Adoption Fees</h2>
-    <p>Our adoption fee is $120, which includes:</p>
-    <ul>
-      <li>Comprehensive health check-up</li>
-      <li>Up-to-date vaccinations</li>
-      <li>Spaying or neutering</li>
-      <li>Microchipping for identification</li>
-      <li>A starter kit with food samples, a cozy blanket, and a toy</li>
-    </ul>
-    <h2>Interested in adopting? Fill out our interest form here:</h2>
+    <main class="main-container">
+      <div class="section-box"> 
+        <h1>How to Adopt a Cat</h1>
+        <p>Adopting a cat is a simple process with a big reward! Follow these steps to bring a cat into your life:</p>
+        <ol>
+          <li><strong>Browse Our Cats:</strong> Check out the profiles of available cats and choose the one that feels like the right fit for you.</li>
+          <li><strong>Fill Out an Adoption Application:</strong> Complete our easy-to-use application form, and tell us about your home and lifestyle.</li>
+          <li><strong>Meet Your Cat:</strong> Once your application is approved, we'll arrange a meet-and-greet with the cat you’re interested in.</li>
+          <li><strong>Finalize Adoption:</strong> If you and your new cat connect, we'll complete the adoption paperwork and make sure your new companion is ready to go home with you!</li>
+        </ol>
+      </div>
+      <hr class="section-divider">
+      <div class="section-box"> 
+        <h2>Adoption Fees</h2>
+        <div class="form-image">
+          <img src="img_6.jpeg" alt="Cat image for adoption form">
+        </div>
+        <p>Our adoption fee is $120, which includes:</p>
+        <ul>
+          <li>Comprehensive health check-up</li>
+          <li>Up-to-date vaccinations</li>
+          <li>Spaying or neutering</li>
+          <li>Microchipping for identification</li>
+          <li>A starter kit with food samples, a cozy blanket, and a toy</li>
+        </ul>
+      </div>
+      <hr class="section-divider">
+    <div class="section-box"> 
+        <h2>Interested in adopting? Fill out our interest form here:</h2>
+        <form>
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name"><br>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email"><br>
+
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" name="phone"><br>
+
+          <label for="interest">Interested in:</label>
+          <input type="text" id="interest" name="interest"><br>
+
+          <p>Owned a Cat Before?</p>
+          <div class="radio-group"> 
+          <label><input type="radio" name="owned" value="yes"> Yes</label>
+          <label><input type="radio" name="owned" value="no"> No</label><br>
+          </div>
+          <label for="comments">Comments:</label><br>
+          <textarea id="comments" name="comments"></textarea><br>
+
+          <button type="submit">Submit</button>
+      </form>
+    </div>
+    <hr class="section-divider">
+      <div class="section-box"> 
+        <h2>Support Us</h2>
+        <div class="form-image">
+          <img src="img_9.jpeg" alt="Cat image for support form">
+        </div>
+        <p>We rely on the kindness of donors and volunteers to continue our mission of helping cats find loving homes. Here's how you can support us:</p>
+
+        <p><strong>Donate:</strong> Every dollar makes a difference and goes directly to food, medical care, and shelter supplies for our cats.</p>
+        <p><strong>Volunteer:</strong> Join us for events or assist in daily activities such as feeding, cleaning, and socializing with the cats.</p>
+        <p><strong>Foster:</strong> Provide a temporary loving home for cats until they find their forever family. Fostering helps reduce overcrowding at the shelter and gives cats the love and care they deserve.</p>
+      </div>
+      <hr class="section-divider">
+      <div class="section-box"> 
+        <h3>Interested in Fostering or Volunteering?</h3>
+        <p>Fill out our Foster & Volunteer Application Form to get started. Share a little about yourself, your availability, and how you'd like to help. We'll get back to you as soon as possible to connect you with meaningful opportunities.</p>
       <form>
-        <label for="name">Full Name:</label>
-        <input type="text" id="name" name="name"><br>
+        <label for="vol-name">Full Name:</label>
+        <input type="text" id="vol-name" name="vol-name"><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br>
+        <label for="vol-email">Email:</label>
+        <input type="email" id="vol-email" name="vol-email"><br>
 
-        <label for="phone">Phone:</label>
-        <input type="text" id="phone" name="phone"><br>
+        <label for="vol-phone">Phone:</label>
+        <input type="text" id="vol-phone" name="vol-phone"><br>
 
-        <label for="interest">Interested in:</label>
-        <input type="text" id="interest" name="interest"><br>
+        <p>How Would You Like to Help?</p>
+        <div class="checkbox-group"> 
+        <label><input type="checkbox" name="help" value="foster"> Foster</label><br>
+        <label><input type="checkbox" name="help" value="volunteer"> Volunteer</label><br>
+        </div>
+        <label for="availability">Availability:</label>
+        <select id="availability" name="availability">
+          <option value="">Select</option>
+          <option value="weekdays">Weekdays</option>
+          <option value="weekends">Weekends</option>
+          <option value="evenings">Evenings</option>
+        </select><br>
 
-        <p>Owned a Cat Before?</p>
-        <label><input type="radio" name="owned" value="yes"> Yes</label>
-        <label><input type="radio" name="owned" value="no"> No</label><br>
-
-        <label for="comments">Comments:</label><br>
-        <textarea id="comments" name="comments"></textarea><br>
+        <label for="why-help">Why Do You Want to Help:</label><br>
+        <textarea id="why-help" name="why-help"></textarea><br>
 
         <button type="submit">Submit</button>
       </form>
-      <div class="form-image">
-        <img src="img_6.jpeg" alt="Cat image for adoption form">
       </div>
-</section>
-<section> 
-    <h2>Support Us</h2>
-  <p>We rely on the kindness of donors and volunteers to continue our mission of helping cats find loving homes. Here's how you can support us:</p>
-
-  <p><strong>Donate:</strong> Every dollar makes a difference and goes directly to food, medical care, and shelter supplies for our cats.</p>
-  <p><strong>Volunteer:</strong> Join us for events or assist in daily activities such as feeding, cleaning, and socializing with the cats.</p>
-  <p><strong>Foster:</strong> Provide a temporary loving home for cats until they find their forever family. Fostering helps reduce overcrowding at the shelter and gives cats the love and care they deserve.</p>
-
-  <h3>Interested in Fostering or Volunteering?</h3>
-  <p>Fill out our Foster & Volunteer Application Form to get started. Share a little about yourself, your availability, and how you'd like to help. We'll get back to you as soon as possible to connect you with meaningful opportunities.</p>
-  <form>
-    <label for="vol-name">Full Name:</label>
-    <input type="text" id="vol-name" name="vol-name"><br>
-
-    <label for="vol-email">Email:</label>
-    <input type="email" id="vol-email" name="vol-email"><br>
-
-    <label for="vol-phone">Phone:</label>
-    <input type="text" id="vol-phone" name="vol-phone"><br>
-
-    <p>How Would You Like to Help?</p>
-    <label><input type="checkbox" name="help" value="foster"> Foster</label><br>
-    <label><input type="checkbox" name="help" value="volunteer"> Volunteer</label><br>
-
-    <label for="availability">Availability:</label>
-    <select id="availability" name="availability">
-      <option value="">Select</option>
-      <option value="weekdays">Weekdays</option>
-      <option value="weekends">Weekends</option>
-      <option value="evenings">Evenings</option>
-    </select><br>
-
-    <label for="why-help">Why Do You Want to Help:</label><br>
-    <textarea id="why-help" name="why-help"></textarea><br>
-
-    <button type="submit">Submit</button>
-  </form>
-  <div class="form-image">
-    <img src="img_9.jpeg" alt="Cat image for support form">
-  </div>
-</section>
+    
+</div>
 </main>
 <footer class="site-footer">
   <p>Follow us:</p>
