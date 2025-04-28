@@ -12,14 +12,14 @@
       <nav class="navbar">
         <div class="nav-container">
           <span class="brand">Cozy Cats</span>
+          <div class="nav-links" id="nav-links">
+            <a href="projectindex.html">Home</a>
+            <a href="availablecats.html">Available Cats</a>
+            <a href="adopt.html">Adopt / Volunteer</a>
+          </div>
           <button class="hamburger" id="hamburger">
             <i class="fas fa-bars"></i>
           </button>
-        </div>
-        <div class="nav-links" id="nav-links">
-          <a href="projectindex.html">Home</a>
-          <a href="availablecats.html">Available Cats</a>
-          <a href="adopt.html">Adopt / Volunteer</a>
         </div>
       </nav>
     <main>
@@ -121,5 +121,15 @@
   </div>
   <p>&copy; 2025 Cozy Cats</p>
 </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburger.addEventListener("click", function () {
+      navLinks.classList.toggle("show");
+    });
+  });
+</script> 
 </body>
 </html>
