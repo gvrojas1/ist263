@@ -76,7 +76,7 @@ img {
 /* --- HEADER SECTION --- */
 .header {
   padding: 2rem;
-  margin-bottom: 2rem;
+  margin: 2rem auto;
   box-shadow: 0 8px 16px rgba(0,0,0,0.05); /* more soft lift */
     backdrop-filter: blur(5px);
     border-radius: 12px
@@ -85,9 +85,10 @@ img {
 
 .header-content {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  padding: 2rem;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 0 2rem;
   flex-wrap: wrap;
 }
 
@@ -101,39 +102,39 @@ img {
 }
 
 .coverpic {
-  width: 300px;
-  height: 300px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 /* --- CAT OF THE WEEK --- */
 .catofweek {
   text-align: center;
-  padding: 0 2rem;
-  margin-bottom: 2rem;
+  padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.05); /* more soft lift */
-    backdrop-filter: blur(5px);
-
+  backdrop-filter: blur(5px);
+  margin: 2rem auto;
 }
 
 .catofweek h2 {
   font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
+  text-align: center
 }
 
 .cat-feature {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1 rem;
+  padding: 2rem;
 }
 
 /* --- HAPPY ADOPTERS --- */
 .happy-adopters {
   padding: 0 2rem;
   margin-bottom: 2rem;
+  margin: 2rem 0;
   text-align: center;
   box-shadow: 0 8px 16px rgba(0,0,0,0.05); /* more soft lift */
     backdrop-filter: blur(5px);
@@ -154,8 +155,9 @@ img {
 
 .testimonial {
   flex: 1 1 calc(25% - 1rem);
+  max-width: 300px;
   background-color: #fbf8f7;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -170,7 +172,7 @@ img {
   border: none;
   height: 2px;
   background: linear-gradient(to right, transparent, #f7cac9, transparent);
-  margin: 3rem auto;
+  margin: 2rem auto;
   width: 60%;
   border-radius: 999px;
 }
@@ -215,7 +217,7 @@ img {
     flex-direction:row;
     justify-content: space-between;
     align-items:center;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
   }
 
   .nav-links {
@@ -247,35 +249,72 @@ img {
   }
 
   .header-content {
+    width: 100%;
+    display:flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding:0;
   }
 
   .header-text {
     width: 100%;
+    text-align: center;
   }
 
   .coverpic {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 1rem;
   }
+/* Consistent spacing on small screens */
+  .header {
+    padding: 1rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
 
-  .testimonials {
+  .catofweek {
+    padding: 1rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .happy-adopters {
+   padding: 1rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+/* Heading spacing override */
+  .header h1,
+  .catofweek h2,
+  .happy-adopters h2 {
+    margin: 0.5rem 0 !important;
+    text-align: center !important;
+  }
+
+  .testimonials, .cat-list {
     flex-direction: column;
     align-items: center;
   }
 
-  .testimonial {
+  .testimonial, .cat-card {
     flex: none;
     width: 90%;
     max-width: 400px;
+    padding:1rem;
   }
-}
+  
+  .form-image {
+    float: none;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    width: 100%;
+  }
+  
+  }
 
-@media (max-width: 500px) {
+@media (min-width: 801px) {
   .testimonial {
     flex: 1 1 100%;
   }
@@ -285,6 +324,16 @@ img {
   .happy-adopters {
     padding: 1rem;
   }
+
+  .form-image {
+    float: right;
+    display: block;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    width: 300px;
+  }
+
+  
 }
 
 /* --- AVAILABLE CATS PAGE STYLES --- */
@@ -348,7 +397,7 @@ iframe {
 .section-box {
   background-color: #fbf8f7;
   padding: 2rem;
-  margin: 2rem 0;
+  margin: 2rem auto;
   border-radius: 16px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.05);
   backdrop-filter: blur(5px);
@@ -357,14 +406,9 @@ iframe {
 
 
 form {
-  margin-top: 1rem;
-}
-
-.form-image {
-  float: right;
-  width: 300px;
-  margin-left: 2rem;
-  margin-bottom: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 input, select, textarea {
@@ -430,6 +474,47 @@ button[type="submit"]:hover {
   gap: 0.5rem;
   font-weight: normal;
 }
+
+/** Java script **/
+
+.cat-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background-color: #fff0f3;
+  padding: 1rem 1.5rem;
+  border: 2px solid #f7cac9;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  opacity: 0;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.cat-popup.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-meme {
+  width: 100px;
+  height: auto;
+  margin-bottom: 0.5rem;
+  border-radius: 12px;
+}
+
+.cat-image {
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+
+
 
 
 

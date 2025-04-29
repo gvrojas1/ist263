@@ -2,6 +2,7 @@
 <html lang="en"> 
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
         <title> Available Cats - Cozy Cats </title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -27,32 +28,32 @@
         <div class="cat-list">
           <div class="cat-card">
             <h2>Luna</h2>
-            <img src="img_4.jpeg" alt="Luna, playful black-and-white cat lounging">
+            <img src="img_4.jpg" alt="Luna, playful black-and-white cat lounging" class="cat-image">
             <p>Playful black-and-white beauty who loves chasing feather toys. Luna is two years old and has a sweet, gentle demeanor. She’s great with children and enjoys lounging in sunny spots.</p>
           </div>
           <div class="cat-card">
             <h2>Mochi</h2>
-            <img src="IMG_16.jpeg" alt="Mochi, fluffy white one-year-old cat">
+            <img src="IMG_16.jpg" alt="Mochi, fluffy white one-year-old cat" class="cat-image">
             <p>Fluffy, white one-year-old with a knack for finding the softest spot on the couch. Mochi is independent but loves occasional cuddles and treats.</p>
           </div>
           <div class="cat-card">
             <h2>Sir Whiskers</h2>
-            <img src="img_3.jpeg" alt="Sir Whiskers, a brown and white cat">
+            <img src="img_3.jpg" alt="Sir Whiskers, a brown and white cat" class="cat-image">
             <p>This four-year-old is regal and sophisticated. He enjoys gentle head scratches and watching birds from the window. He’s a bit shy at first but warms up quickly.</p>
           </div>
           <div class="cat-card">
             <h2>Daisy</h2>
-            <img src="img_2.jpeg" alt="Daisy, a relaxed cat">
+            <img src="img_2.jpg" alt="Daisy, a relaxed cat" class="cat-image">
             <p>A one-year-old with a bubbly personality. Daisy is always on the move, ready for the next adventure or a game of hide and seek.</p>
           </div>
           <div class="cat-card">
             <h2>Oliver</h2>
-            <img src="img_5.jpeg" alt="Oliver, white and gray cat">
+            <img src="img_5.jpg" alt="Oliver, white and gray cat" class="cat-image">
             <p>This five-year-old gentle giant is a gray Maine Coon mix. He’s affectionate, loves belly rubs, and is a pro at making biscuits with his big, fluffy paws.</p>
           </div>
           <div class="cat-card">
             <h2>Peaches</h2>
-            <img src="img_1.jpeg" alt="Peaches, grey with stripes and white paws cat">
+            <img src="img_1.jpg" alt="Peaches, grey with stripes and white paws cat" class="cat-image">
             <p>A two-year-old with a sassy yet lovable attitude. Peaches adores laser pointers and will keep you entertained with her playful antics.</p>
           </div>
         </div>
@@ -104,6 +105,32 @@
                 navLinks.classList.toggle("show");
               });
             });
+            
+            document.addEventListener("DOMContentLoaded", function () {
+            const catImages = document.querySelectorAll(".cat-card img");
+
+            catImages.forEach((img) => {
+             img.addEventListener("click", function () {
+            const popup = document.createElement("div");
+            popup.className = "cat-popup";
+
+            popup.innerHTML = `
+            <p>Adopt me, please... 🥺</p>
+            `;
+
+            document.body.appendChild(popup);
+
+            // Trigger fade-in
+             setTimeout(() => popup.classList.add("show"), 10);
+
+             // Auto remove after 2.5s
+             setTimeout(() => {
+            popup.classList.remove("show");
+            setTimeout(() => popup.remove(), 300);
+           }, 2500);
+       });
+     });
+  });
           </script> 
       </body>
   </html>
