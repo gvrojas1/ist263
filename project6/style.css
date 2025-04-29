@@ -494,6 +494,16 @@ button[type="submit"]:hover {
   font-weight: normal;
 }
 
+fieldset {
+  border: none;
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+
+fieldset label {
+  margin-right: 1rem;
+  display: inline-block;
+}
 /** Java script **/
 
 .cat-popup {
